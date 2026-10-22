@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find beautifully designed hostels for your next adventure."
+    />
+    <title>roamly | Stay curious</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="roamly home"
+        ><span class="brand-mark">r</span>roamly</a
+      >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#stays">Find a stay</a>
+        <a href="#inspiration">Inspiration</a>
+        <a href="#why">Why roamly?</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="currency" type="button">USD <span>⌄</span></button>
+        <button class="login-button" type="button" data-open-modal="login">
+          Log in
+        </button>
+        <button class="menu-button" type="button" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">The world is waiting</p>
+          <h1>Stay somewhere<br /><em>worth remembering.</em></h1>
+          <p class="hero-text">
+            Handpicked hostels for curious people. Find your next story, not
+            just a bed.
+          </p>
+        </div>
+        <div
+          class="hero-art"
+          aria-label="Traveler relaxing at a coastal hostel"
+        >
+          <div class="sun"></div>
+          <div class="hero-sticker">
+            good stays<br /><strong>good stories</strong> <span>✦</span>
+          </div>
+          <div class="art-sunflower">✺</div>
+        </div>
+        <form class="search-panel" id="search-form">
+          <div class="search-field destination-field">
+            <label for="destination">Where to?</label>
+            <div class="field-input">
+              <span class="field-icon">⌖</span
+              ><input
+                id="destination"
+                type="text"
+                placeholder="City, country or hostel"
+              />
+            </div>
+          </div>
+          <div class="search-field date-field">
+            <label for="check-in">Check in</label>
+            <div class="field-input">
+              <span class="field-icon">□</span
+              ><input id="check-in" type="date" />
+            </div>
+          </div>
+          <div class="search-field date-field">
+            <label for="check-out">Check out</label>
+            <div class="field-input">
+              <span class="field-icon">□</span
+              ><input id="check-out" type="date" />
+            </div>
+          </div>
+          <div class="search-field guest-field">
+            <label for="guests">Guests</label>
+            <div class="field-input">
+              <span class="field-icon">♙</span
+              ><button id="guests" class="guest-trigger" type="button">
+                2 guests
+              </button>
+            </div>
+            <div class="guest-popover" id="guest-popover">
+              <div>
+                <span>Adults</span>
+                <div class="stepper">
+                  <button type="button" data-step="adults" data-change="-1">
+                    −</button
+                  ><b id="adult-count">2</b
+                  ><button type="button" data-step="adults" data-change="1">
+                    +
+                  </button>
+                </div>
+              </div>
+              <div>
+                <span>Children</span>
+                <div class="stepper">
+                  <button type="button" data-step="children" data-change="-1">
+                    −</button
+                  ><b id="child-count">0</b
+                  ><button type="button" data-step="children" data-change="1">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="search-button" type="submit">
+            Search stays <span>↗</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="quick-links" aria-label="Popular destinations">
+        <span class="quick-label">Trending now</span>
+        <button type="button" data-destination="Lisbon">Lisbon</button
+        ><button type="button" data-destination="Mexico City">
+          Mexico City</button
+        ><button type="button" data-destination="Bali">Bali</button
+        ><button type="button" data-destination="Tokyo">Tokyo</button
+        ><button type="button" data-destination="Cape Town">Cape Town</button>
+      </section>
+
+      <section class="stays-section" id="stays">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Made for your kind of trip</p>
+            <h2>Stays with <em>personality.</em></h2>
+          </div>
+          <button class="outline-button" id="view-all" type="button">
+            View all stays <span>↗</span>
+          </button>
+        </div>
+        <div class="stay-grid" id="stay-grid">
+          <article
+            class="stay-card"
+            data-city="Lisbon"
+            data-title="The Passenger Hostel"
+            data-price="32"
+            data-image="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1000&q=85"
+          >
+            <div class="card-image image-lisbon">
+              <button
+                class="heart-button"
+                type="button"
+                aria-label="Save The Passenger Hostel"
+              >
+                ♡</button
+              ><span class="image-tag">Guest favourite</span>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>The Passenger Hostel</h3>
+                <p>Lisbon, Portugal</p>
+              </div>
+              <div class="rating"><strong>4.9</strong><span>★★★★★</span></div>
+            </div>
+            <div class="card-meta">
+              <span>From <b>$32</b> / night</span
+              ><span class="availability">● 4 beds left</span>
+            </div>
+          </article>
+          <article
+            class="stay-card"
+            data-city="Mexico City"
+            data-title="Casa Pepe"
+            data-price="28"
+            data-image="https://images.unsplash.com/photo-1520277739336-7bf67edfa768?auto=format&fit=crop&w=1000&q=85"
+          >
+            <div class="card-image image-mexico">
+              <button
+                class="heart-button"
+                type="button"
+                aria-label="Save Casa Pepe"
+              >
+                ♡</button
+              ><span class="image-tag warm">Best atmosphere</span>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>Casa Pepe</h3>
+                <p>Mexico City, Mexico</p>
+              </div>
+              <div class="rating"><strong>4.8</strong><span>★★★★★</span></div>
+            </div>
+            <div class="card-meta">
+              <span>From <b>$28</b> / night</span
+              ><span class="availability">● 6 beds left</span>
+            </div>
+          </article>
+          <article
+            class="stay-card"
+            data-city="Bali"
+            data-title="The Farm Hostel"
+            data-price="19"
+            data-image="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=85"
+          >
+            <div class="card-image image-bali">
+              <button
+                class="heart-button"
+                type="button"
+                aria-label="Save The Farm Hostel"
+              >
+                ♡</button
+              ><span class="image-tag green">Eco pick</span>
+            </div>
+            <div class="card-content">
+              <div>
+                <h3>The Farm Hostel</h3>
+                <p>Canggu, Bali</p>
+              </div>
+              <div class="rating"><strong>4.9</strong><span>★★★★★</span></div>
+            </div>
+            <div class="card-meta">
+              <span>From <b>$19</b> / night</span
+              ><span class="availability">● 3 beds left</span>
+            </div>
+          </article>
+        </div>
+        <div class="no-results" id="no-results">
+          <span>⌕</span>
+          <h3>No stays found yet</h3>
+          <p>Try another destination or browse our trending picks.</p>
+          <button class="outline-button" id="reset-search" type="button">
+            Reset search
+          </button>
+        </div>
+      </section>
+
+      <section class="inspiration" id="inspiration">
+        <div class="inspiration-image"></div>
+        <div class="inspiration-copy">
+          <p class="eyebrow">A different way to travel</p>
+          <h2>More than a bed.<br /><em>It's a way in.</em></h2>
+          <p>
+            Wake up somewhere new and feel at home before breakfast. Our hostels
+            are chosen for the people, places and little rituals that make a
+            city feel yours.
+          </p>
+          <a class="text-link" href="#why"
+            >Discover the roamly way <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="why-section" id="why">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The roamly promise</p>
+            <h2>Travel lightly.<br /><em>Feel deeply.</em></h2>
+          </div>
+          <p class="section-intro">
+            The details matter. So we look for stays that make the journey feel
+            as good as the destination.
+          </p>
+        </div>
+        <div class="promise-grid">
+          <div>
+            <span class="promise-number">01</span>
+            <h3>Picked with taste</h3>
+            <p>
+              No endless scroll. Just hostels with soul, style and a reason to
+              come back.
+            </p>
+          </div>
+          <div>
+            <span class="promise-number">02</span>
+            <h3>People first</h3>
+            <p>
+              Book with confidence thanks to real reviews from travelers like
+              you.
+            </p>
+          </div>
+          <div>
+            <span class="promise-number">03</span>
+            <h3>Always flexible</h3>
+            <p>
+              Plans change. Most of our stays offer free cancellation, so you
+              can keep moving.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">r</span>roamly</a>
+      <p>Stay curious, wherever you go.</p>
+      <div>
+        <a href="#stays">Explore</a><a href="#why">About</a
+        ><a href="mailto:hello@roamly.example">Contact</a>
+      </div>
+    </footer>
+
+    <div class="modal-backdrop" id="modal-backdrop">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal-close"
+          id="modal-close"
+          type="button"
+          aria-label="Close"
+        >
+          ×
+        </button>
+        <p class="eyebrow">Welcome back</p>
+        <h2 id="modal-title">Log in to roam.</h2>
+        <p id="modal-message">
+          Save stays, manage bookings and keep your travel ideas in one place.
+        </p>
+        <form id="login-form">
+          <label for="login-email">Email address</label
+          ><input
+            id="login-email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          /><label for="login-password">Password</label
+          ><input
+            id="login-password"
+            type="password"
+            placeholder="At least 6 characters"
+            autocomplete="current-password"
+            minlength="6"
+            required
+          />
+          <p class="form-error" id="login-error" role="alert"></p>
+          <button class="search-button" type="submit">
+            Log in <span>↗</span>
+          </button>
+        </form>
+        <small>Demo login: any valid email and a 6+ character password.</small>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
